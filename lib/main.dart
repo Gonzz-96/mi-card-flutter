@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(LayoutChallenge());
+  runApp(MyApp());
 }
 
 class LayoutChallenge extends StatelessWidget {
@@ -57,25 +57,29 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Container(
-                height: 100.0,
-                width: 100.0,
-                color: Colors.white,
-                child: Text("Container 1"),
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/me.jpg'),
               ),
-              Container(
-                height: 100.0,
-                width: 100.0,
-                color: Colors.blue,
-                child: Text("Container 2"),
+              Text(
+                'Gonzalo Campos',
+                style: TextStyle(
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontFamily: 'Pacifico',
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              Container(
-                height: 100.0,
-                width: 100.0,
-                color: Colors.red,
-                child: Text("Container 3"),
+              Text(
+                'MOBILE DEVELOPER',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  letterSpacing: 3.0,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'SourceSansPro',
+                  color: Colors.teal[100],
+                ),
               )
             ],
           ),
